@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Sitemap: /sitemap.xml
+Sitemap: /62e9397a5a3f5.xml

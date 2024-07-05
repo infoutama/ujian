@@ -1,0 +1,242 @@
+<!doctype html><html lang=id>
+<head><meta charset=utf-8><meta name=generator content="Hugo 0.88.1"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=color-scheme content="light dark">
+<meta name=supported-color-schemes content="light dark">
+<link rel=icon href=data:,><title>Bastion Host Firewall&nbsp;&ndash;&nbsp;Ujian</title><link rel=stylesheet href=https://infoutama.github.io/ujian/css/core.min.dec8381cea9fddc398e84ada49f9d475056092fea1011e74b4ee693ed1aef8deecbb0f4b5fde12cc0091d2fc5a3165eb.css integrity=sha384-3sg4HOqf3cOY6EraSfnUdQVgkv6hAR50tO5pPtGu+N7suw9LX94SzACR0vxaMWXr><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Bastion Host Firewall"><script type=application/ld+json>{"@context":"http://schema.org","@type":"MediaObject","additionalType":"Product","name":"Bastion Host Firewall","aggregateRating":{"@type":"AggregateRating","ratingValue":5,"ratingCount":2}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/bertigamas.github.io\/ujian\/post\/bastion-host-firewall\/","name":"Bastion Host Firewall"}}]}</script>
+<script type='text/javascript' src='//irrigatenotwithstandingcommit.com/80/61/f5/8061f578647c0ed091eac7a5d0434556.js'></script>
+<link rel=canonical href=https://infoutama.github.io/ujian/post/bastion-host-firewall/>
+</head>
+<body><section id=header>
+<div class="header wrap"><span class="header left-side"><a class="site home" href=/ujian/><span class="site name">Ujian</span></a></span>
+<span class="header right-side"></span></div></section><section id=content><div class=article-container><section class="article header">
+<h1 class="article title">Bastion Host Firewall</h1><p class="article date">Sep 14, 2021</p></section><article class="article markdown-body"><p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/securitywing.com/wp-content/uploads/2012/09/screened-host-firewall.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="7 Different Types of Firewalls | securitywing"></p>
+<p>7 Different Types of Firewalls | securitywing</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/i.pcmag.com/imagery/encyclopedia-terms/bastion-host-scnrout2.fit_lim.size_1050x.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Definition of bastion host | PCMag"></p>
+<p>Definition of bastion host | PCMag</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/i.stack.imgur.com/Ktyco.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewalling: Screened Host / Bastion Host - Information Security Stack  Exchange"></p>
+<p>Firewalling: Screened Host / Bastion Host - Information Security Stack Exchange</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/securitywing.com/wp-content/uploads/2012/09/screened-subnet-firewall.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="7 Different Types of Firewalls | securitywing"></p>
+<p>7 Different Types of Firewalls | securitywing</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/3.bp.blogspot.com/-YzHlBW0bpTE/Um4vZdJuwjI/AAAAAAAAEFE/AAn21fVxeC4/s1600/firewall.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Arsitektur Firewall | Jaringan Komputer - kktara.com"></p>
+<p>Arsitektur Firewall | Jaringan Komputer - kktara.com</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/ebrary.net/imag/computer/rao_tish/image075.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Deployment Architecture, Option 1: Bastion Host, Option 2: Staging  Area or Demilitarized Zone (DMZ), Multiple Firewall - The InfoSec Handbook"></p>
+<p>Firewall Deployment Architecture, Option 1: Bastion Host, Option 2: Staging Area or Demilitarized Zone (DMZ), Multiple Firewall - The InfoSec Handbook</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/x-raw-image:///194fbb44b891279b918cb78865b4fe4957f5f97a368428aa44251e502599af42 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="1. Introduksi"></p>
+<ol>
+<li>Introduksi</li>
+</ol>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/slidetodoc.com/presentation_image_h/b7dce0a3d89450cdfdcc82c69155b142/image-21.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Security Firewall design principle Firewall Characteristics Types of"></p>
+<p>Security Firewall design principle Firewall Characteristics Types of</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/docstore.mik.ua/orelly/networking_2ndEd/fire/figs/fire2.0609.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Variations on Firewall Architectures (Building Internet Firewalls, 2nd  Edition)"></p>
+<p>Variations on Firewall Architectures (Building Internet Firewalls, 2nd Edition)</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/1.bp.blogspot.com/-ms0tEysJCjE/TaqZusCIUbI/AAAAAAAAAAU/eqMrjkBtgt0/s1600/G2.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Gudang Ilmu"></p>
+<p>Gudang Ilmu</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/pendidikan.co.id/wp-content/uploads/2020/03/Screened-host.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall adalah - Fungsi, Cara Kerja, Teknik dan Arsitektur"></p>
+<p>Firewall adalah - Fungsi, Cara Kerja, Teknik dan Arsitektur</p>
+<p>![Chapter 4] 4.2 Firewall Architectures](<a href=https://i0.wp.com/docstore.mik.ua/orelly/networking/firewall/figs/fire0404.gif target=_blank rel="noopener noreferrer">https://i0.wp.com/docstore.mik.ua/orelly/networking/firewall/figs/fire0404.gif</a>
+)</p>
+<p>Chapter 4] 4.2 Firewall Architectures</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/slideplayer.info/slide/2670020/10/images/27/Konfigurasi+Firewall+Sistem+firewall+yang+meng-screen+host+%28single-homed+bastion+host%29.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall. - ppt download"></p>
+<p>Firewall. - ppt download</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/x-raw-image:///5ff4f2062a809739ed7c346fb5b1e975c9a7280bc01987eaf3d76f34321bb464 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="1. Introduksi"></p>
+<ol>
+<li>Introduksi</li>
+</ol>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/x-raw-image:///a576d4310a6a03db0c587218eefbaf45864ad28fc2f0fd373ab52828f349753a src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="BAB II"></p>
+<p>BAB II</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/www.schuba.com/christoph/pub/courses/icns-0203/lectures/firef4.GIF src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="ICNS-0203 Lecture 10"></p>
+<p>ICNS-0203 Lecture 10</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/docs.oracle.com/cd/A97335_02/ias.102/a95201/secur_01.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="What Is The Definition Of Bastion Host"></p>
+<p>What Is The Definition Of Bastion Host</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/itlearningconcept.files.wordpress.com/2015/10/screenedhostarch1.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall | sinau ICT"></p>
+<p>Firewall | sinau ICT</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/aptika.kominfo.go.id/wp-content/uploads/2018/10/Firewall-1.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Keamanan Jaringan Internet dan Firewall – Ditjen Aptika"></p>
+<p>Keamanan Jaringan Internet dan Firewall – Ditjen Aptika</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/image1.slideserve.com/2990413/screened-host-firewall-system-single-homed-bastion-host-l.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="PPT - Firewalls PowerPoint Presentation, free download - ID:2990413"></p>
+<p>PPT - Firewalls PowerPoint Presentation, free download - ID:2990413</p>
+<p>![Chapter 9] Two Sample Firewalls](<a href=https://i3.wp.com/www.cs.ait.ac.th/~on/O/oreilly/tcpip/firewall/figs/fire0901.gif target=_blank rel="noopener noreferrer">https://i3.wp.com/www.cs.ait.ac.th/~on/O/oreilly/tcpip/firewall/figs/fire0901.gif</a>
+)</p>
+<p>Chapter 9] Two Sample Firewalls</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/www.novell.com/documentation/nbm38/overview/graphics/pl_103a.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Novell Documentation: Novell BorderManager 3.8 - Firewall Technologies"></p>
+<p>Novell Documentation: Novell BorderManager 3.8 - Firewall Technologies</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/slideplayer.info/slide/13782886/85/images/57/Konfigurasi+Firewall+Screened+host+firewall+system+%28dual-homed+bastion+host%29.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Catur Iswahyudi. - ppt download"></p>
+<p>Firewall Catur Iswahyudi. - ppt download</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/slidetodoc.com/presentation_image/dc806abf59c4056d473553724ae44162/image-11.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Pertemuan V Definisi Firewall merupakan sebuah perangkat"></p>
+<p>Firewall Pertemuan V Definisi Firewall merupakan sebuah perangkat</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src="https://i3.wp.com/i0.wp.com/www.nesabamedia.com/wp-content/uploads/2019/10/Karakteristik-Firewall.jpg?resize=550%2C344&ssl=1" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Karakteristik Firewall &amp;amp; Artistekturnya dalam Jaringan (Lengkap)"></p>
+<p>Karakteristik Firewall & Artistekturnya dalam Jaringan (Lengkap)</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/skillset.s3.amazonaws.com/training/Sec%2B%20videos/M3-T01-Secure%20Network%20Topologies.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Which firewall architectures employs both an external and internal router,  and a bastion host? - Skillset"></p>
+<p>Which firewall architectures employs both an external and internal router, and a bastion host? - Skillset</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/1.bp.blogspot.com/-r9ZnPmYECho/X3aPD-3zJjI/AAAAAAAADpA/mHy38D8KvrEhqhEMa1dmMKVYmS_x9T0WwCLcBGAsYHQ/s0/fire1.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Konfigurasi &amp;amp; Langkah Membangun Firewall - Bundet"></p>
+<p>Konfigurasi & Langkah Membangun Firewall - Bundet</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/aidanfinn.com/wp-content/uploads/2020/01/BastionHost.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Why A Bastion Host Is Necessary For Remote VM Administration (Including  Azure) | Aidan Finn, IT Pro"></p>
+<p>Why A Bastion Host Is Necessary For Remote VM Administration (Including Azure) | Aidan Finn, IT Pro</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/docstore.mik.ua/orelly/networking_2ndEd/fire/figs/fire2.2402.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Merged Routers and Bastion Host Using General-Purpose Hardware (Building  Internet Firewalls, 2nd Edition)"></p>
+<p>Merged Routers and Bastion Host Using General-Purpose Hardware (Building Internet Firewalls, 2nd Edition)</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src="https://i1.wp.com/image.slidesharecdn.com/pertemuan05firewall-130319060436-phpapp02/95/pertemuan05-firewall-12-638.jpg?cb=1363673116" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Pertemuan05 firewall"></p>
+<p>Pertemuan05 firewall</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/www2.hawaii.edu/~sdunan/ics623/BastionHost.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Introduction to Firewalls"></p>
+<p>Introduction to Firewalls</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/paparisa.unpatti.ac.id/linux_journal_archive_1994_2007/LJ/083/4415f3.large.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Designing and Using DMZ Networks to Protect Internet Servers"></p>
+<p>Designing and Using DMZ Networks to Protect Internet Servers</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/img.sysnettechsolutions.com/What-is-Bastion-Host-Nedir-EN.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="What is a Bastion Host? - SYSNETTECH Solutions"></p>
+<p>What is a Bastion Host? - SYSNETTECH Solutions</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_456,h_322/http://www.portknocking.org/wp-content/uploads/2021/06/Jenis-dan-Arsitektur-Dari-Firewall.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Jenis dan Arsitektur Dari Firewall"></p>
+<p>Jenis dan Arsitektur Dari Firewall</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/x-raw-image:///07b05ff96ff4acae2d9813b41189dfb20a57b8e80c818f05835f6d32383437ef src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="UNIVERSITAS GUNADARMA MENGENAL SISTEM FIREWALL"></p>
+<p>UNIVERSITAS GUNADARMA MENGENAL SISTEM FIREWALL</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/i.stack.imgur.com/cEK45.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Bastion host for PCI compliance - Server Fault"></p>
+<p>Bastion host for PCI compliance - Server Fault</p>
+<p>![Chapter 5] 5.6 Selecting Services Provided by the Bastion Host](<a href=https://i3.wp.com/www.cs.ait.ac.th/~on/O/oreilly/tcpip/firewall/figs/fire0501.gif target=_blank rel="noopener noreferrer">https://i3.wp.com/www.cs.ait.ac.th/~on/O/oreilly/tcpip/firewall/figs/fire0501.gif</a>
+)</p>
+<p>Chapter 5] 5.6 Selecting Services Provided by the Bastion Host</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/4.bp.blogspot.com/-O2z5cFuOyH0/Vi3T_idMgaI/AAAAAAAAAUM/1VjQ3ZxxMwY/s1600/FIREWALL.PNG src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="d&amp;rsquo;Meong Merdeka: KEAMANAN JARINGAN"></p>
+<p>d&rsquo;Meong Merdeka: KEAMANAN JARINGAN</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/x-raw-image:///7c85e0fc3aa3bde7f3ddbe543a0baf997a0c14a52d00fa0def378c17440e7559 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="1. Introduksi"></p>
+<ol>
+<li>Introduksi</li>
+</ol>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/fasrastro697.weebly.com/uploads/1/2/5/6/125619134/716821984.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Bastion Host - fasrastro"></p>
+<p>Bastion Host - fasrastro</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/1.bp.blogspot.com/-x36OrqeP79U/W4zM66BDhJI/AAAAAAAADTQ/BLMjNPGEUrATaqYRxAheRXIV8viNN-2wACLcBGAs/s1600/hosts%2Bserver.PNG src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall di Host dan Server ~ IT -Muchib Kreatif"></p>
+<p>Firewall di Host dan Server ~ IT -Muchib Kreatif</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/cdn-images-1.medium.com/fit/t/1600/480/1*PU9YppoFnT3FZXbkh4TFtw.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="You don&amp;rsquo;t need that Bastion host. Today I&amp;rsquo;m raising an unpopular opinion… |  by Henrik Sylvester Pedersen | Medium"></p>
+<p>You don&rsquo;t need that Bastion host. Today I&rsquo;m raising an unpopular opinion… | by Henrik Sylvester Pedersen | Medium</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/upload.wikimedia.org/wikipedia/commons/8/87/Bastion_host.JPG src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="File:Bastion host.JPG - Wikimedia Commons"></p>
+<p>File:Bastion host.JPG - Wikimedia Commons</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/slidetodoc.com/presentation_image_h/12e80aa9ae70e5c068b7a2af63abcc4b/image-21.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewalls What is a Firewall A firewall is"></p>
+<p>Firewalls What is a Firewall A firewall is</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/www.vanderbist.com/wp-content/uploads/2013/08/BastionHost_resize.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="bastion | Dirk&amp;rsquo;s Daily Digits"></p>
+<p>bastion | Dirk&rsquo;s Daily Digits</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/docplayer.info/docs-images/62/46860726/images/20-0.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall. Instruktur : Ferry Wahyu Wibowo, S.Si., M.Cs. - PDF Free Download"></p>
+<p>Firewall. Instruktur : Ferry Wahyu Wibowo, S.Si., M.Cs. - PDF Free Download</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2017/11/15/NM_diagram_061316_a1.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Bastion host | AWS Security Blog"></p>
+<p>Bastion host | AWS Security Blog</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/x-raw-image:///4a8801b5b2297e1696809ea43a7cdcfd0968ac0a30f3d4985a0ef869ef98d80f src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="UNIVERSITAS GUNADARMA MENGENAL SISTEM FIREWALL"></p>
+<p>UNIVERSITAS GUNADARMA MENGENAL SISTEM FIREWALL</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/i.stack.imgur.com/OawSQ.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Textbook uses terminology like Double/Single Bastion Inline/T to describe  firewall architectures. Are these terms used in professional environments?  - Information Security Stack Exchange"></p>
+<p>Textbook uses terminology like Double/Single Bastion Inline/T to describe firewall architectures. Are these terms used in professional environments? - Information Security Stack Exchange</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/flylib.com/books/4/178/1/html/2/images/fig11-3.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="11.2 SCREENED HOST FIREWALL CONFIGURATIONS | Internet &amp;amp; Intranet Security"></p>
+<p>11.2 SCREENED HOST FIREWALL CONFIGURATIONS | Internet & Intranet Security</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/docstore.mik.ua/orelly/networking_2ndEd/fire/figs/fire2.0602.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Architectures"></p>
+<p>Firewall Architectures</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src="https://i1.wp.com/image.slidesharecdn.com/firewall23-tugas1-131006164322-phpapp01/95/firewall-17-638.jpg?cb=1381078815" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt=Firewall></p>
+<p>Firewall</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/calesmart.com/assets/content_upload/firewall/dual%20homed.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Arsitektur dan jenis-jenis Firewall dalam jaringan komputer"></p>
+<p>Arsitektur dan jenis-jenis Firewall dalam jaringan komputer</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/slideplayer.com/5741238/19/images/slide_1.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Internet Bastion Hosts Internal Network Router/Firewall Mail FTP - ppt  video online download"></p>
+<p>Internet Bastion Hosts Internal Network Router/Firewall Mail FTP - ppt video online download</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/x-raw-image:///a2fd25003b2ef182da1f00b8bb3cd8523ad1d357a9fa5b3f24cf1d5d0d4c57e8 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="SISTEM KEAMANAN JARINGAN KOMPUTER"></p>
+<p>SISTEM KEAMANAN JARINGAN KOMPUTER</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/docplayer.info/docs-images/73/68713075/images/19-2.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="FIREWALL NUR FISABILILLAH, S.KOM, MMSI - PDF Download Gratis"></p>
+<p>FIREWALL NUR FISABILILLAH, S.KOM, MMSI - PDF Download Gratis</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/skillset.s3.amazonaws.com/training/CISSP%20mini%20videos/D4-16%20-%20DMZ.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Regarding firewalls, what&amp;rsquo;s a bastion host? - Skillset"></p>
+<p>Regarding firewalls, what&rsquo;s a bastion host? - Skillset</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/x-raw-image:///27526f7c22e68e4411d9be0e93444a743b17a82922e1c83f066e397532259ada src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="BEBERAPA ARSITEKTUR FIREWALL Indra Dermawan Dosen: Onno W. Purbo"></p>
+<p>BEBERAPA ARSITEKTUR FIREWALL Indra Dermawan Dosen: Onno W. Purbo</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/library.binus.ac.id/eColls/eThesisdoc/Bab2HTML/2013101079IFBab2001/background9.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="2013101079IFBab2001 - page 9 of 20"></p>
+<p>2013101079IFBab2001 - page 9 of 20</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/12puby.files.wordpress.com/2011/12/11.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="FIREWALL: SEKURITI INTERNET | PubyKarmatoli.Net"></p>
+<p>FIREWALL: SEKURITI INTERNET | PubyKarmatoli.Net</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/x-raw-image:///c91d64dccfc1fe5dd980043c57a59fe8b8c72d8109cf09141e6fbc1fc579f32d src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="1. Introduksi"></p>
+<ol>
+<li>Introduksi</li>
+</ol>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/image3.slideserve.com/5622488/slide12-l.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="PPT - Firewall PowerPoint Presentation, free download - ID:5622488"></p>
+<p>PPT - Firewall PowerPoint Presentation, free download - ID:5622488</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/www.researchgate.net/profile/Michail-Michalos/publication/341370438/figure/fig5/AS:893232967852035@1589974743835/Test-bed-corporate-network_Q320.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="PDF) Design and Implementation of Firewall Security Policies using Linux  Iptables"></p>
+<p>PDF) Design and Implementation of Firewall Security Policies using Linux Iptables</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/x-raw-image:///e65fbe62bc304f438aa76bfb01df8736e2f1108de432cb4a66dfe591f4a09f20 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt=FIREWALL></p>
+<p>FIREWALL</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/www.pearsonitcertification.com/content/images/chap3_0789728362/elementLinks/03fig05.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Understanding the Concepts of Security Topologies | CompTIA Security+ Exam:  Devices, Media, and Topology Security | Pearson IT Certification"></p>
+<p>Understanding the Concepts of Security Topologies | CompTIA Security+ Exam: Devices, Media, and Topology Security | Pearson IT Certification</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/docstore.mik.ua/orelly/networking_2ndEd/fire/figs/fire2.1001.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Selecting Services Provided by a Bastion Host (Building Internet Firewalls,  2nd Edition)"></p>
+<p>Selecting Services Provided by a Bastion Host (Building Internet Firewalls, 2nd Edition)</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/demo.dokumen.tips/img/380x512/reader024/reader/2021012606/5aeaf62e7f8b9a66258cb8c1/r-2.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Screened Host Firewall (Single-Homed Bastion Host &amp;hellip; viewThe first type of  firewall is a screened host"></p>
+<p>Screened Host Firewall (Single-Homed Bastion Host &mldr; viewThe first type of firewall is a screened host</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/tudip.com/wp-content/uploads/2020/10/Bastion_Host_Firewall_facebook.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Blog: Bastion Host Firewall | Tudip"></p>
+<p>Blog: Bastion Host Firewall | Tudip</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/lingkarwarta.com/wp-content/uploads/2021/09/Arsitektur-2Bdual-homed-2Bhost-1.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Memahami Fungsi Firewall Pada Jaringan VoIP | LingkarWarta.com"></p>
+<p>Memahami Fungsi Firewall Pada Jaringan VoIP | LingkarWarta.com</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/cf.ppt-online.org/files/slide/i/i6gdfAXWGoK9NMx17burljLDSnhsBwVzkRIm2c/slide-21.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Computer Security: Principles and Practice. Firewalls and Intrusion  Prevention Systems. Chapter 9 - online presentation"></p>
+<p>Computer Security: Principles and Practice. Firewalls and Intrusion Prevention Systems. Chapter 9 - online presentation</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/present5.com/presentation/e967e160b4cfd261f9956d9aa875945d/image-6.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="DMZ In a Box What is a"></p>
+<p>DMZ In a Box What is a</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/slidetodoc.com/presentation_image_h/d85ed5bd5b90cf0cce925b0159358c91/image-34.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Topik pembahasan Definisi Tujuan Prinsipprinsip disain firewall"></p>
+<p>Firewall Topik pembahasan Definisi Tujuan Prinsipprinsip disain firewall</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/www.researchgate.net/profile/Willy-Susilo/publication/30387898/figure/fig2/AS:667697192898573@1536202824867/Firewall-Architecture-scribe-the-types-of-firewalls.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Architecture scribe the types of firewalls. | Download Scientific  Diagram"></p>
+<p>Firewall Architecture scribe the types of firewalls. | Download Scientific Diagram</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/ars.els-cdn.com/content/image/3-s2.0-B0122272404000708-gr11.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Screening Router - an overview | ScienceDirect Topics"></p>
+<p>Screening Router - an overview | ScienceDirect Topics</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/1.bp.blogspot.com/-2ZQOo8SevqE/TyjDIGKFjUI/AAAAAAAAAIo/2ODCwDHKjQs/s1600/05.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Berbagai ilmu: FireWall"></p>
+<p>Berbagai ilmu: FireWall</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/files.readme.io/b6afc39-bastion.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Getting Started Bastion Server"></p>
+<p>Getting Started Bastion Server</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/www.kulichki.com/moshkow/SECURITY/firewall-faq/faq2.gif src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Internet Firewalls Frequently Asked Questions"></p>
+<p>Internet Firewalls Frequently Asked Questions</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/1.bp.blogspot.com/-dYbZU_V4RmM/XcEpQZu9NhI/AAAAAAAAOVo/2LPzO5Kp6tUhY0yObp1SxD-AvgEqAhI5wCEwYBhgL/s400/ssg.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Pada Jaringan VOIP – dipa14.web.id"></p>
+<p>Firewall Pada Jaringan VOIP – dipa14.web.id</p>
+<p>![Chapter 12] 12.7 Firewalls](<a href=https://i1.wp.com/litux.nl/Books/Books/www.leothreads.com/e-book/oreillybookself/tcpip/tcpip/figs/tcp2_1204.gif target=_blank rel="noopener noreferrer">https://i1.wp.com/litux.nl/Books/Books/www.leothreads.com/e-book/oreillybookself/tcpip/tcpip/figs/tcp2_1204.gif</a>
+)</p>
+<p>Chapter 12] 12.7 Firewalls</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/x-raw-image:///05f77edf61212a1fa07015287054bdad9f7de2783c13997db4be2cc0b6299b9a src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="BAB 15 KEAMANAN JARINGAN DENGAN FIREWALL"></p>
+<p>BAB 15 KEAMANAN JARINGAN DENGAN FIREWALL</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/slideplayer.info/slide/16247305/95/images/18/ARSITEKTUR+DASAR+FIREWALL+KEAMANAN+JARINGAN+KOMPUTER.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="KONSEP DASAR FIREWALL KEAMANAN JARINGAN KOMPUTER - ppt download"></p>
+<p>KONSEP DASAR FIREWALL KEAMANAN JARINGAN KOMPUTER - ppt download</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/i.ytimg.com/vi/Z3u-EcQreaI/maxresdefault.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Rules in GCP - building a Bastion Host - YouTube"></p>
+<p>Firewall Rules in GCP - building a Bastion Host - YouTube</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/x-raw-image:///ff4b21ec3bf575fdf92eeab863caf06200c79f34d3505ec0ac831f5363e0519b src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Figure 20.2 Firewall Configurations"></p>
+<p>Figure 20.2 Firewall Configurations</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src="https://i0.wp.com/imgv2-2-f.scribdassets.com/img/document/330809579/original/4cba70afc5/1629855989?v=1" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Topologi BUS | PDF"></p>
+<p>Topologi BUS | PDF</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/docs.microsoft.com/en-us/azure/bastion/media/bastion-nsg/figure-1.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Working with VMs and NSGs in Azure Bastion | Microsoft Docs"></p>
+<p>Working with VMs and NSGs in Azure Bastion | Microsoft Docs</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/chriskyfung.github.io/images/posts/qwiklabs/qwiklabs-GSP303-diagram.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="☁ Use Terraform to Configure Secure RDP using a Windows Bastion Host on GCP  | Chris KY FUNG&amp;rsquo;s Blog"></p>
+<p>☁ Use Terraform to Configure Secure RDP using a Windows Bastion Host on GCP | Chris KY FUNG&rsquo;s Blog</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src="https://i3.wp.com/image.slidesharecdn.com/bastionhosttopologijaringan-130707121120-phpapp02/95/bastion-host-topologi-jaringan-2-638.jpg?cb=1373199115" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Bastion host topologi jaringan"></p>
+<p>Bastion host topologi jaringan</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/aprilhardi.files.wordpress.com/2015/03/4t.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Keamanan Jaringan dengan firewall | Komputer dan Jaringan"></p>
+<p>Keamanan Jaringan dengan firewall | Komputer dan Jaringan</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/x-raw-image:///9964ca9eba1a462dcadafe1341a52e9c803b4cbd194d60342e4e61eb8774799e src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Bastion Hosts: Protected Access for Virtual Cloud Networks"></p>
+<p>Bastion Hosts: Protected Access for Virtual Cloud Networks</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/www.learningjournal.guru/_resources/img/jpg-7x/bastion-server-architecture.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="What is Bastion Host Server - Learning Journal"></p>
+<p>What is Bastion Host Server - Learning Journal</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/www.ezeelogin.com/kb/assets/security/Securing%20Ezeelogin%20SSH%20Jump%20Server.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="How to secure SSH jump server / SSH bastion host / SSH gateway"></p>
+<p>How to secure SSH jump server / SSH bastion host / SSH gateway</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/5/52/DMZ_network_diagram_1_firewall.png/220px-DMZ_network_diagram_1_firewall.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Screened subnet - Wikipedia"></p>
+<p>Screened subnet - Wikipedia</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/x-raw-image:///d08340cad1eae8f6689441a3127bdecced422b6f930dc4f610bfa1e4fff8cf79 src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="FIREWALL ARCHITECTURES"></p>
+<p>FIREWALL ARCHITECTURES</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i2.wp.com/i.ytimg.com/vi/lltKNTdjg4Y/hqdefault.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Firewall Implementation - YouTube"></p>
+<p>Firewall Implementation - YouTube</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/x-raw-image:///26a5d48331fcd13ae5a9aa575e1a7cfe5e481d47c95dc2467ec524034745475f src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Research Article Design and Implementation of Firewall Security Policies  using Linux Iptables"></p>
+<p>Research Article Design and Implementation of Firewall Security Policies using Linux Iptables</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i0.wp.com/goteleport.com/blog/images/2020/ssh-jump-server-header.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="What is an SSH Bastion? | SSH Bastion host setup | Teleport"></p>
+<p>What is an SSH Bastion? | SSH Bastion host setup | Teleport</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/1.bp.blogspot.com/-CWK-an59M90/Woq_gVN_A2I/AAAAAAAAAGk/y3-KaDD50yIBbE0q9GHvgfdr7xxw9irSQCLcBGAs/s1600/download.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Kebutuhan Persyaratan Alat Untuk Membangun Server Firewall - Sharing Ilmu  Murah"></p>
+<p>Kebutuhan Persyaratan Alat Untuk Membangun Server Firewall - Sharing Ilmu Murah</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i1.wp.com/balaskas.gr/blog//fp-content/images/bastion.png src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Ευάγγελος Μπαλάσκας - How to build a SSH Bastion host » Evaggelos Balaskas  - System Engineer"></p>
+<p>Ευάγγελος Μπαλάσκας - How to build a SSH Bastion host » Evaggelos Balaskas - System Engineer</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/slidetodoc.com/presentation_image_h/25d521e695c6fac9c6853d66dfb89188/image-20.jpg src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="KONSEP DASAR FIREWALL KEAMANAN JARINGAN KOMPUTER Rony Heri"></p>
+<p>KONSEP DASAR FIREWALL KEAMANAN JARINGAN KOMPUTER Rony Heri</p>
+<p><img class=lazy onerror="this.src='data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='" data-src=https://i3.wp.com/x-raw-image:///727ae382b30ec97a6ba79a09c20815d2cb9921dfb53d88934278cea57cd4c56a src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Introduction (cont.)"></p>
+<p>Introduction (cont.)</p>
+</article>
+<a href=https://infoutama.github.io/ujian/post/lagu-lagu-inggris-baru/>Lagu Lagu Inggris Baru</a>
+<a href=https://infoutama.github.io/ujian/post/koda-fabel/>Koda Fabel</a>
+<a href=https://infoutama.github.io/ujian/post/apa-itu-hp-hdc/>Apa Itu Hp Hdc</a>
+<a href=https://infoutama.github.io/ujian/post/lingkaran-advent/>Lingkaran Advent</a>
+<a href=https://infoutama.github.io/ujian/post/cara-membuat-keripik-salak-tanpa-vacuum-frying/>Cara Membuat Keripik Salak Tanpa Vacuum Frying</a>
+<a href=https://infoutama.github.io/ujian/post/kucing-anggora-besar/>Kucing Anggora Besar</a>
+<a href=https://infoutama.github.io/ujian/post/universitas-negeri-di-indonesia/>Universitas Negeri Di Indonesia</a>
+<a href=https://infoutama.github.io/ujian/post/arti-wages/>Arti Wages</a>
+<a href=https://infoutama.github.io/ujian/post/ikhsan-memiliki-3-orang-anak/>Ikhsan Memiliki 3 Orang Anak</a>
+<a href=https://infoutama.github.io/ujian/post/ddr-ram/>Ddr Ram</a>
+</div>
+<div class="article bottom"><section class="article navigation"><p><a class=link href=https://infoutama.github.io/ujian/post/quran-surat-al-adiyat/>Quran Surat Al Adiyat</a></p><p><a class=link href=https://infoutama.github.io/ujian/post/ciri-ciri-gymnospermae/>Ciri Ciri Gymnospermae</a></p></section></div></section><section id=footer><div class=footer-wrap></div>
+</section><script type=text/javascript>function ignielLazyLoad(){eval(function(d,e,a,c,b,f){if(b=function(a){return(a<e?'':b(parseInt(a/e)))+((a=a%e)>35?String.fromCharCode(a+29):a.toString(36))},!''.replace(/^/,String)){while(a--)f[b(a)]=c[a]||b(a);c=[function(a){return f[a]}],b=function(){return'\\w+'},a=1}while(a--)c[a]&&(d=d.replace(new RegExp('\\b'+b(a)+'\\b','g'),c[a]));return d}('u B(){Y(v e=o.1r("B"),t=0;t<e.1q;t++)Q(e[t])&&(e[t].N=e[t].1p("1n-N"))}u Q(e){v t=e.1t();Z t.1x>=0&&t.1w>=0&&t.1v<=(y.1u||o.T.1m)&&t.1k<=(y.1c||o.T.1b)}v b=["\\r\\m\\m\\D\\G\\a\\f\\c\\M\\n\\p\\c\\a\\f\\a\\k","\\h\\f","\\r\\c\\c\\r\\l\\A\\D\\G\\a\\f\\c","\\g\\h\\r\\m","\\p\\l\\k\\h\\g\\g","\\V\\1a\\1e\\R\\h\\f\\c\\a\\f\\c\\M\\h\\r\\m\\a\\m","\\w\\p\\a\\1l\\p\\c\\k\\n\\l\\c","\\r","\\1f\\w\\a\\k\\L\\1j\\a\\g\\a\\l\\c\\h\\k\\W\\g\\g","\\g\\a\\f\\q\\c\\A","\\w\\p\\a\\k\\W\\q\\a\\f\\c","\\c\\a\\p\\c","\\m\\h\\l\\w\\F\\a\\f\\c\\D\\g\\a\\F\\a\\f\\c","\\1i\\h\\m\\L","\\l\\g\\n\\l\\1g","\\p\\l\\k\\h\\g\\g\\1h\\h\\J","\\c\\h\\J","\\q\\a\\c\\S\\h\\w\\f\\m\\n\\f\\q\\R\\g\\n\\a\\f\\c\\1z\\a\\l\\c","\\A\\k\\a\\X","\\a\\1y\\a\\l","\\q\\a\\c\\D\\g\\a\\F\\a\\f\\c\\S\\L\\1F\\m","\\p\\l\\k\\h\\g\\g\\U\\a\\n\\q\\A\\c","\\n\\f\\f\\a\\k\\U\\a\\n\\q\\A\\c","\\J\\k\\a\\G\\a\\f\\c\\V\\a\\X\\r\\w\\g\\c","\\n\\c\\a\\F"];u I(d,j){y[b[0]]?y[b[0]](d,j):y[b[2]](b[1]+d,j)}I(b[3],B),I(b[4],B),o[b[0]](b[5],u(){b[6];Y(v d=o[b[8]](b[7]),j=d[b[9]],s=/1D|1B/i[b[11]](1G[b[10]])?o[b[12]]:o[b[13]],C=u(d,j,s,C){Z(d/=C/2)<1?s/2*d*d*d+j:s/2*((d-=2)*d*d+2)+j};j--;){d[b[1C]](j)[b[0]](b[14],u(d){v j,E=s[b[15]],x=o[b[1A]](/[^#]+$/[b[19]](1H[b[18]])[0])[b[17]]()[b[16]],z=s[b[1d]]-y[b[1s]],O=z>E+x?x:z-E,K=1o,H=u(d){j=j||d;v x=d-j,z=C(x,E,O,K);s[b[15]]=z,K>x&&P(H)};P(H),d[b[1E]]()})}});',62,106,'||||||||||x65|_0x1b5d|x74|_0xdd48x2||x6E|x6C|x6F||_0xdd48x3|x72|x63|x64|x69|document|x73|x67|x61|_0xdd48x4||function|var|x75|_0xdd48x7|window|_0xdd48x8|x68|lazy|_0xdd48x5|x45|_0xdd48x6|x6D|x76|_0xdd48xb|registerListener|x70|_0xdd48xa|x79|x4C|src|_0xdd48x9|requestAnimationFrame|isInViewport|x43|x42|documentElement|x48|x44|x41|x66|for|return|||||||||||x4F|clientWidth|innerWidth|21|x4D|x71|x6B|x54|x62|x53|left|x20|clientHeight|data|900|getAttribute|length|getElementsByClassName|22|getBoundingClientRect|innerHeight|top|right|bottom|x78|x52|20|trident|24|firefox|23|x49|navigator|this'.split('|'),0,{}))}eval(function(c,e,a,b,d,f){if(d=function(a){return a.toString(36)},!''.replace(/^/,String)){while(a--)f[a.toString(e)]=b[a]||a.toString(e);b=[function(a){return f[a]}],d=function(){return'\\w+'},a=1}while(a--)b[a]&&(c=c.replace(new RegExp('\\b'+d(a)+'\\b','g'),b[a]));return c}('j 4=["\\7\\9\\9\\e\\d\\a\\b\\8\\i\\g\\h\\8\\a\\b\\a\\k","\\f\\c\\7\\9","\\7\\8\\8\\7\\m\\l\\e\\d\\a\\b\\8","\\c\\b\\f\\c\\7\\9"];5[4[0]]?5[4[0]](4[1],6,!1):5[4[2]]?5[4[2]](4[1],6):5[4[3]]=6;5[4[0]]?5[4[0]](4[1],6,!1):5[4[2]]?5[4[2]](4[1],6):5[4[3]]=6;',23,23,'||||_0xdfb4|window|ignielLazyLoad|x61|x74|x64|x65|x6E|x6F|x76|x45|x6C|x69|x73|x4C|var|x72|x68|x63'.split('|'),0,{}))</script>
+
+</body>
+</html>
